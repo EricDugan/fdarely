@@ -82,9 +82,11 @@ test = c(rep(1,n),rep(2,n))
 # plot of simulated data
 matplot(t(data),type='l',col=test,lty=individual)
 
-# Computation of similarity
-fRho(data,individual,test)
+# Computation of index
+fRho.result = fRho(data,individual,test)
 
+# Plot of pointwise index
+plot(domain,fRho.result$pointwise_rho,type='l')
 
 }
 \references{

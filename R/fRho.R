@@ -76,9 +76,11 @@
 #' # plot of simulated data
 #' matplot(t(data),type='l',col=test,lty=individual)
 #' 
-#' # Computation of similarity
-#' fRho(data,individual,test)
-#'
+#' # Computation of index
+#' fRho.result = fRho(data,individual,test)
+#' 
+#' # Plot of pointwise index
+#' plot(domain,fRho.result$pointwise_rho,type='l')
 #' 
 #' @references
 #' Pini, A., Markström, J., and Schelin, L. (2019): Test–retest reliability measures for curve data: 

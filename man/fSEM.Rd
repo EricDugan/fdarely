@@ -82,9 +82,14 @@ test = c(rep(1,n),rep(2,n))
 # plot of simulated data
 matplot(t(data),type='l',col=test,lty=individual)
 
-# Computation of similarity
-fSEM(data,individual,test)
+# Computation of index
+fSEM.result = fSEM(data,individual,test)
 
+# Plot of pointwise index
+plot(domain,fSEM.result$pointwise_SEM,type='l',
+     ylim=range(c(fSEM.result$up_SEM,fSEM.result$low_SEM)))
+lines(domain,fSEM.result$low_SEM,col=2)
+lines(domain,fSEM.result$up_SEM,col=2)
 
 }
 \references{

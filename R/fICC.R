@@ -77,8 +77,14 @@
 #' matplot(t(data),type='l',col=test,lty=individual)
 #' 
 #' # Computation of similarity
-#' fICC(data,individual,test)
+#' fICC.result = fICC(data,individual,test)
 #' 
+#' # Plot of pointwise index
+#' plot(domain,fICC.result$pointwise_ICC,type='l',
+#'      ylim=range(c(fICC.result$up_ICC,fICC.result$low_ICC)))
+#' lines(domain,fICC.result$low_ICC,col=2)
+#' lines(domain,fICC.result$up_ICC,col=2)
+
 #' 
 #' @references
 #' Pini, A., Markström, J., and Schelin, L. (2019): Test–retest reliability measures for curve data: 

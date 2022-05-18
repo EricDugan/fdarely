@@ -1,7 +1,7 @@
 Package: fdarely
 Type: Package
 Title: Reliability Measures for Functional Data
-Version: 0.0.1
+Version: 1.0.0
 Date: 2017-06-21
 Depends: fda
 Imports: abind

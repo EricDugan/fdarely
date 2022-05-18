@@ -83,8 +83,13 @@ test = c(rep(1,n),rep(2,n))
 matplot(t(data),type='l',col=test,lty=individual)
 
 # Computation of similarity
-fICC(data,individual,test)
+fICC.result = fICC(data,individual,test)
 
+# Plot of pointwise index
+plot(domain,fICC.result$pointwise_ICC,type='l',
+     ylim=range(c(fICC.result$up_ICC,fICC.result$low_ICC)))
+lines(domain,fICC.result$low_ICC,col=2)
+lines(domain,fICC.result$up_ICC,col=2)
 
 }
 \references{
