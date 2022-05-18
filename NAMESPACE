@@ -1,4 +1,4 @@
-
+import(fda)
 
 export(fCMC)
 export(fDist)

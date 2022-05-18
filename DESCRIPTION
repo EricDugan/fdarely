@@ -3,7 +3,8 @@ Type: Package
 Title: Reliability Measures for Functional Data
 Version: 0.0.1
 Date: 2017-06-21
-Imports: fda
+Depends: fda
+Imports: abind
 Author: Alessia Pini, Jonas Markstrom, Lina Schelin
 Maintainer: Alessia Pini <alessia.pini@unicatt.it>
 Description: Implementation of reliability measures for functional data.
