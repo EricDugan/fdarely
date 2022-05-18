@@ -88,7 +88,12 @@
 #' 
 #' @references
 #' Pini, A., Markström, J., and Schelin, L. (2019): Test–retest reliability measures for curve data: 
-#' an overview with recommendations and supplementary code, \emph{Sports Biomechanics}.
+#' an overview with recommendations and supplementary code, \emph{Sports Biomechanics} 21 (2): 179-200.
+#' 
+#' Schelin, L., Pini, A., Markström, J. L., Hager, C. K. (2021): Test-retest reliability of entire
+#' time-series data from hip, knee and ankle kinematics and kinetics during one-leg hops
+#' for distance: Analyses using integrated pointwise indices, \emph{Journal of Biomechanics}
+#' Jul 19, 124:110546. 
 #' 
 #' Shrout, P. E., & Fleiss, J. L. (1979): Intraclass correlations: uses in assessing rater reliability. \emph{Psychological bulletin}, 86(2), 420.
 #' 
