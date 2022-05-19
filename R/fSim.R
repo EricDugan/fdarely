@@ -25,7 +25,8 @@
 #'
 #' 
 #' @examples
-#' # Example with simulated data:
+#' # Examples with simulated data:
+#' # EXAMPLE 1: reliable data
 #' n = 10 # number of individuals
 #' 
 #' # parameters of the basis expansion
@@ -42,6 +43,7 @@
 #' mucoef = c(0,5,0,-5,0) 
 #' 
 #' # generating data:
+#' set.seed(1)
 #' # coefficients of individual random effect
 #' c_e_i = matrix(nrow=n,ncol=ncoef,data=rnorm(n*ncoef))
 #' c_e_i = c_e_i*matrix(nrow=n,ncol=ncoef,data=sigmaB,byrow=TRUE) +
@@ -73,6 +75,57 @@
 #' matplot(t(data),type='l',col=test,lty=individual)
 #' 
 #' # Computation of index
+#' fSim(data,individual,test)
+#' 
+#' # EXAMPLE 2: not reliable data (increased variability between test and retest)
+#' n = 10 # number of individuals
+#' 
+#' # parameters of the basis expansion
+#' ncoef = 5 # number of basis coefficients
+#' p = 100 # number of evaluation points
+#' domain = seq(0,100,len=p) # domain
+#' basis = create.bspline.basis(range(domain),nbasis=ncoef,norder=4) # b spline basis
+#' # variability parameters:
+#' sigmaW = c(3,7,7,7,3) # variability within individuals
+#' sigmaB = c(2.5,5,5,5,2.5) # variability between individuals
+#' 
+#' # mean parameters :
+#' # mean vector of basis coefficients
+#' mucoef = c(0,5,0,-5,0) 
+#' 
+#' # generating data:
+#' set.seed(1)
+#' # coefficients of individual random effect
+#' c_e_i = matrix(nrow=n,ncol=ncoef,data=rnorm(n*ncoef))
+#' c_e_i = c_e_i*matrix(nrow=n,ncol=ncoef,data=sigmaB,byrow=TRUE) + 
+#'   matrix(nrow=n,ncol=ncoef,data=mucoef,byrow=TRUE)
+#' 
+#' # coefficients of test random effect
+#' c_e_i1 = matrix(nrow=n,ncol=ncoef,data=rnorm(n*ncoef))
+#' c_e_i1 = c_e_i1*matrix(nrow=n,ncol=ncoef,data=sigmaW,byrow=TRUE) 
+#' 
+#' # coefficients of retest random effect
+#' c_e_i2 = matrix(nrow=n,ncol=ncoef,data=rnorm(n*ncoef))
+#' c_e_i2 = c_e_i2*matrix(nrow=n,ncol=ncoef,data=sigmaW,byrow=TRUE) 
+#' 
+#' # generating functional data
+#' f_e_i = fd(coef=t(c_e_i),basisobj=basis)
+#' f_e_i1 = fd(coef=t(c_e_i1),basisobj=basis)
+#' f_e_i2 = fd(coef=t(c_e_i2),basisobj=basis)
+#' e_i = t(eval.fd(domain,f_e_i))
+#' e_i1 = t(eval.fd(domain,f_e_i1))
+#' e_i2 = t(eval.fd(domain,f_e_i2))
+#' y1 = e_i + e_i1 # test
+#' y2 = e_i + e_i2 # retest
+#' 
+#' data = rbind(y1,y2) # bind data
+#' individual = c(1:n,1:n)
+#' test = c(rep(1,n),rep(2,n))
+#' 
+#' # plot of simulated data
+#' matplot(t(data),type='l',col=test,lty=individual)
+#' 
+#' # Computation of similarity
 #' fSim(data,individual,test)
 #' 
 #' 
