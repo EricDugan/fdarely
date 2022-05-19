@@ -24,7 +24,7 @@
 #' @seealso See also \code{\link{fICC}} for the functional ICC and \code{\link{fSEM}} for functional SEM. 
 #'
 #' @details 
-#' Note that the CMC could be undefined for some individuals in the case of curves with a small ROM. 
+#' Note that the CMC could be undefined for some individuals in the case of curves with a small range. 
 #' In such cases, the common CMC value is computed as the average
 #' among all individuals whose CMC is defined. 
 #' 

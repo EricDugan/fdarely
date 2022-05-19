@@ -29,11 +29,6 @@ A list containing the following components:
 Computation of the functional similarity for a test-retest
 scenario.
 }
-\details{
-Note that the CMC could be undefined for some individuals in the case of curves with a small ROM. 
-In such cases, the common CMC value is computed as the average
-among all individuals whose CMC is defined.
-}
 \examples{
 # Example with simulated data:
 n = 10 # number of individuals
@@ -82,14 +77,19 @@ test = c(rep(1,n),rep(2,n))
 # plot of simulated data
 matplot(t(data),type='l',col=test,lty=individual)
 
-# Computation of similarity
+# Computation of index
 fSim(data,individual,test)
 
 
 }
 \references{
 Pini, A., Markström, J., and Schelin, L. (2019): Test–retest reliability measures for curve data: 
-an overview with recommendations and supplementary code, \emph{Sports Biomechanics}.
+an overview with recommendations and supplementary code, \emph{Sports Biomechanics} 21 (2): 179-200.
+
+Schelin, L., Pini, A., Markström, J. L., Hager, C. K. (2021): Test-retest reliability of entire
+time-series data from hip, knee and ankle kinematics and kinetics during one-leg hops
+for distance: Analyses using integrated pointwise indices, \emph{Journal of Biomechanics}
+Jul 19, 124:110546.
 }
 \seealso{
 See also \code{\link{fICC}} for the functional ICC and \code{\link{fSEM}} for functional SEM.
