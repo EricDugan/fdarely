@@ -81,6 +81,9 @@
 #' # Computation of index
 #' fRho.result = fRho(data,individual,test)
 #' 
+#' # Integrated index
+#' fRho.result$rho
+#' 
 #' # Plot of pointwise index
 #' plot(domain,fRho.result$pointwise_rho,type='l')
 #' 
@@ -132,8 +135,11 @@
 #' # plot of simulated data
 #' matplot(t(data),type='l',col=test,lty=individual)
 #' 
-#' # Computation of similarity
+#' # Computation of index
 #' fRho.result = fRho(data,individual,test)
+#' 
+#' # Integrated index
+#' fRho.result$rho
 #' 
 #' #' # Plot of pointwise index
 #' plot(domain,fRho.result$pointwise_rho,type='l')

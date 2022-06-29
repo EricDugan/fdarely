@@ -78,8 +78,11 @@
 #' # plot of simulated data
 #' matplot(t(data),type='l',col=test,lty=individual)
 #' 
-#' # Computation of similarity
+#' # Computation of index
 #' fICC.result = fICC(data,individual,test)
+#' 
+#' # Integrated index
+#' fICC.result$ICC
 #' 
 #' # Plot of pointwise index
 #' plot(domain,fICC.result$pointwise_ICC,type='l',
@@ -136,8 +139,11 @@
 #' # plot of simulated data
 #' matplot(t(data),type='l',col=test,lty=individual)
 #' 
-#' # Computation of similarity
+#' # Computation of index
 #' fICC.result = fICC(data,individual,test)
+#' 
+#' # Integrated index
+#' fICC.result$ICC
 #' 
 #' # Plot of pointwise index
 #' plot(domain,fICC.result$pointwise_ICC,type='l',

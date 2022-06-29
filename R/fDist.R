@@ -127,7 +127,7 @@
 #' # plot of simulated data
 #' matplot(t(data),type='l',col=test,lty=individual)
 #' 
-#' # Computation of similarity
+#' # Computation of index
 #' fDist(data,individual,test,domain)
 #' 
 #' @references
