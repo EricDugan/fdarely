@@ -2,13 +2,12 @@ Package: fdarely
 Type: Package
 Title: Reliability Measures for Functional Data
 Version: 1.0.0
-Date: 2017-06-21
+Date: 2022-06-30
 Depends: fda
 Imports: abind
 Author: Alessia Pini, Jonas Markstrom, Lina Schelin
 Maintainer: Alessia Pini <alessia.pini@unicatt.it>
-Description: Implementation of reliability measures for functional data.
+Description: Implementation of reliability measures for functional data. Such methods can be aplied to assess the reliability of an experiment whose outut is a curve that is evaluated on the same statistical units in multiple test sessions (with at least two sessions, test and retest). Functions to compute functional pointwise reliability indices (ICC, SEM, correlation), their integrated versions, and functional CMC and distance are provided. Details on the definition of such quantities are available in Pini, Markström, Schelin (2019) <doi:10.1080/14763141.2019.1655089> and Schelin, Pini, Markström, Hager (2021) <doi:10.1016/j.jbiomech.2021.110546>.
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.1.1
 License: GPL-2

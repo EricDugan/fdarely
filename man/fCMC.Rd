@@ -135,7 +135,7 @@ test = c(rep(1,n),rep(2,n))
 # plot of simulated data
 matplot(t(data),type='l',col=test,lty=individual)
 
-# Computation of similarity
+# Computation of index
 fCMC(data,individual,test)
 
 }

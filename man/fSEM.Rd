@@ -87,6 +87,9 @@ matplot(t(data),type='l',col=test,lty=individual)
 # Computation of index
 fSEM.result = fSEM(data,individual,test)
 
+# Integrated index
+fSEM.result$SEM
+
 # Plot of pointwise index
 plot(domain,fSEM.result$pointwise_SEM,type='l',
      ylim=range(c(fSEM.result$up_SEM,fSEM.result$low_SEM)))
@@ -145,6 +148,9 @@ matplot(t(data),type='l',col=test,lty=individual)
 
 # Computation of similarity
 fSEM.result = fSEM(data,individual,test)
+
+# Integrated index
+fSEM.result$SEM
 
 # Plot of pointwise index
 plot(domain,fSEM.result$pointwise_SEM,type='l',
